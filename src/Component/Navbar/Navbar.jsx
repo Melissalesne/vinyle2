@@ -5,7 +5,7 @@ import "./navbar.css";
 export default function Navbar() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg p-4">
+      <nav className="navbar fixed-top  navbar-expand-lg p-4">
         <div className="container-fluid">
           <NavLink to="/">
             <a className="navbar-brand" href="/">
