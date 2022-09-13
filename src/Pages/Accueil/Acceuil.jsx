@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../../Component/Navbar/Navbar";
 import Carousel from "../../Component/Carousel/Carousel";
 import Category from "../../Component/CategoryCards/Category";
+import Footer from "../../Component/Footer/Footer";
 
 export default function Acceuil() {
   return (
@@ -9,6 +10,7 @@ export default function Acceuil() {
       <Navbar />
       <Carousel />
       <Category />
+      <Footer />
     </div>
   );
 }

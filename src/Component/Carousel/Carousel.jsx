@@ -52,12 +52,13 @@ export default function Carousel() {
               alt="..."
             />
             <div class="carousel-caption">
-              <h1>Nouveautés ça vient d'arrivées.</h1>
+              <h1>Nouveautés ça vient d'arrivées dans votre boutique.</h1>
               <button type="button" className="btn btn-dark p-2 fs-4 mt-2">
                 Découvrir
               </button>
             </div>
           </div>
+
           <div class="carousel-item">
             <img
               src="./assets/images/vente.jpg"
@@ -65,7 +66,7 @@ export default function Carousel() {
               alt="..."
             />
             <div class="carousel-caption">
-              <h1>Top ventes des vinyles les plus vendus.</h1>
+              <h1>Top ventes des vinyles les plus vendus en 2022.</h1>
               <button type="button" className="btn btn-dark mt-3 p-2 fs-4 mt-2">
                 Découvrir
               </button>

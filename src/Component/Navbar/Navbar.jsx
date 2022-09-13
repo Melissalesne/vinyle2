@@ -5,7 +5,7 @@ import "./navbar.css";
 export default function Navbar() {
   return (
     <div>
-      <nav className="navbar fixed-top  navbar-expand-lg p-4">
+      <nav className="navbar fixed-top  navbar-expand-lg p-3">
         <div className="container-fluid">
           <NavLink to="/">
             <a className="navbar-brand" href="/">
@@ -109,7 +109,7 @@ export default function Navbar() {
                   </a>
                 </li>
               </NavLink>
-              <NavLink to="/connexion">
+              <NavLink to="/panier">
                 <li className="nav-item">
                   <a className="nav-link text-white fs-4" href="/">
                     Mon panier
