@@ -1,10 +1,11 @@
 import React from "react";
 import "./chansonFrancaise.css";
+import Navbar from "../../Component/Navbar/Navbar";
 
 export default function ChansonsFrancaise() {
   return (
     <div>
-      <h1>Bienvenue sur la page Chansons françaises</h1>
+      <Navbar />
     </div>
   );
 }

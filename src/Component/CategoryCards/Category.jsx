@@ -4,8 +4,8 @@ import "./category.css";
 
 export default function Category() {
   return (
-    <div className="container">
-      <div className="row row-cols-1 row-cols-md-3 g-4 mt-5">
+    <div className="container-fluid mt-5">
+      <div className="row row-cols-1 row-cols-md-6 g-3">
         <div className="col">
           <div className="card">
             <img

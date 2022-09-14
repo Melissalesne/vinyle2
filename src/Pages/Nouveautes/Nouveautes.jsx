@@ -1,10 +1,11 @@
 import React from "react";
 import "./nouveautes.css";
+import Navbar from "../../Component/Navbar/Navbar";
 
 export default function Nouveautes() {
   return (
     <div>
-      <h1>Bienvenue sur la page Nouveautés</h1>
+      <Navbar />
     </div>
   );
 }

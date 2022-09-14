@@ -1,10 +1,11 @@
 import React from "react";
 import "./jazzBlues.css";
+import Navbar from "../../Component/Navbar/Navbar";
 
 export default function JazzBlues() {
   return (
     <div>
-      <h1>Bienvenue sur la page Jazz&Blues</h1>
+      <Navbar />
     </div>
   );
 }

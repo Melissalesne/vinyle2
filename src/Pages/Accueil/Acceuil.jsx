@@ -3,6 +3,7 @@ import Navbar from "../../Component/Navbar/Navbar";
 import Carousel from "../../Component/Carousel/Carousel";
 import Category from "../../Component/CategoryCards/Category";
 import Footer from "../../Component/Footer/Footer";
+import "./acceuil.css";
 
 export default function Acceuil() {
   return (

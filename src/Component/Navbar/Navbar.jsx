@@ -105,14 +105,16 @@ export default function Navbar() {
               <NavLink to="/connexion">
                 <li className="nav-item">
                   <a className="nav-link text-white fs-4" href="/">
-                    Se connecter
+                    <span>Se connecter</span>
+                    <i class="fa-solid fa-user p-2"></i>
                   </a>
                 </li>
               </NavLink>
               <NavLink to="/panier">
                 <li className="nav-item">
                   <a className="nav-link text-white fs-4" href="/">
-                    Mon panier
+                    <span>Mon panier</span>
+                    <i class="fa-solid fa-cart-shopping p-2"></i>
                   </a>
                 </li>
               </NavLink>

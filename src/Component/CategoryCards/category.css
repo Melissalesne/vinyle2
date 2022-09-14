@@ -2,10 +2,11 @@
 .card .card-img-top {
     object-fit: cover;
     object-position: center;
-    width: 100%;
-    height: 350px;
+    width:100%;
+    height: 300px;
    
 }
+
 
 .card-img-top:hover {
     -webkit-filter : grayscale(40%); 
@@ -26,25 +27,29 @@
     text-shadow: 4px 4px 2px #000000;
     font-family: 'Artifika', serif;
     margin-top: -70%;
-    font-size: 2em;
+    font-size: 1.2em;
     cursor: pointer;
     
 }
 
 
 .box .text {
-    background: rgba(53, 53, 48, 0.8);
+    background: rgba(11, 11, 11, 0.8);
     padding: 15px;
     margin:0 auto;
-    border-radius: 5px;
+    border-radius: 10px;
         
-}  
+} 
+
+.card-body {
+    background-color:rgba(245, 243, 216, 0.647);
+}
 .card a {
     text-decoration: none;
 }
 
 .box .text:hover{
-    background: rgba(26, 26, 24, 0.8);
+    background: rgba(55, 55, 55, 0.8);
 
 }
 

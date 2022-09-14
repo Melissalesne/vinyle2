@@ -1,5 +1,6 @@
 import React from "react";
 import "./carousel.css";
+import { NavLink } from "react-router-dom";
 
 export default function Carousel() {
   return (
@@ -38,6 +39,7 @@ export default function Carousel() {
               class="d-block w-100"
               alt="..."
             />
+
             <div class="carousel-caption">
               <h1>Bienvenue dans votre boutique Vinyle Remenber</h1>
               <button type="button" className="btn btn-dark p-2 fs-4 mt-2">

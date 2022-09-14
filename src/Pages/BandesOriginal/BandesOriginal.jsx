@@ -1,10 +1,11 @@
 import React from "react";
 import "./bandesOriginal.css";
+import Navbar from "../../Component/Navbar/Navbar";
 
 export default function BandesOriginal() {
   return (
     <div>
-      <h1>Bienvenue sur la page Bandes original</h1>
+      <Navbar />
     </div>
   );
 }
