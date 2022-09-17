@@ -1,0 +1,20 @@
+.imgInfos {
+    width: 125px;
+    height: 125px;
+}
+
+.bloc {
+    margin-top: 10%;
+}
+
+.section-infos {
+    background-color:rgba(9, 9, 9, 0.889);
+    margin:10px;
+    
+}
+
+p {
+    color: white;
+    text-align: justify;
+}
+

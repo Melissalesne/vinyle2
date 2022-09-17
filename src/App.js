@@ -9,6 +9,8 @@ import JazzBlues from "./Pages/JazzBlues/JazzBlues";
 import ChansonFrancaises from "./Pages/ChansonFrancaises/ChansonsFrancaise";
 import Classique from "./Pages/Classique/Classique";
 import BandesOriginal from "./Pages/BandesOriginal/BandesOriginal";
+import Reggae from "./Pages/Reggae/Reggae";
+import Electro from "./Pages/Electro/Electro";
 import Histoire from "./Pages/histoireDuVinyle/histoire";
 import Connexion from "./Pages/Connexion/Connexion";
 import Panier from "./Pages/Panier/Panier";
@@ -31,6 +33,8 @@ function App() {
           <Route path="/chansonFrancaises" element={<ChansonFrancaises />} />
           <Route path="/classique" element={<Classique />} />
           <Route path="/bandesOriginal" element={<BandesOriginal />} />
+          <Route path="/reggae" element={<Reggae />} />
+          <Route path="/electro" element={<Electro />} />
           <Route path="/histoire" element={<Histoire />} />
           <Route path="/connexion" element={<Connexion />} />
           <Route path="/panier" element={<Panier />} />

@@ -97,6 +97,20 @@ export default function Navbar() {
                         </a>
                       </li>
                     </NavLink>
+                    <NavLink to="/reggae">
+                      <li>
+                        <a className="dropdown-item fs-5 " href="/">
+                          Reggae
+                        </a>
+                      </li>
+                    </NavLink>
+                    <NavLink to="/electro">
+                      <li>
+                        <a className="dropdown-item fs-5 " href="/">
+                          Eléctro
+                        </a>
+                      </li>
+                    </NavLink>
                   </ul>
                 </li>
               </NavLink>
