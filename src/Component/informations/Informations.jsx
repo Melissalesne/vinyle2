@@ -42,7 +42,7 @@ export default function Informations() {
             <h2 class="text-center text-white fs-3">Paiement</h2>
             <p>
               Commandez en toute sérénité. Nous utilisons le système 3D
-              <br /> secure avec vérification d'identiés par l'envoie d'un code
+              <br /> secure avec vérification d'identités par l'envoie d'un code
               par sms.
             </p>
           </div>

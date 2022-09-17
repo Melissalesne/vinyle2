@@ -54,6 +54,7 @@ export default function Navbar() {
                   >
                     Genres
                   </a>
+
                   <ul className="dropdown-menu">
                     <NavLink to="/popRock">
                       <li>
@@ -115,6 +116,12 @@ export default function Navbar() {
                 </li>
               </NavLink>
             </ul>
+            <div className="box1 m-3">
+              <input type="text" placeholder="Artiste, label, titre..." />
+              <a href="#">
+                <i className="fas fa-search"></i>
+              </a>
+            </div>
             <ul className="navbar-nav ml-auto">
               <NavLink to="/connexion">
                 <li className="nav-item">

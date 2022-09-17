@@ -9,12 +9,15 @@
 
 .section-infos {
     background-color:rgba(9, 9, 9, 0.889);
-    margin:10px;
+    /* margin:10px; */
     
 }
+
 
 p {
     color: white;
     text-align: justify;
 }
+
+
 
