@@ -1,5 +1,6 @@
 import React from "react";
 import "./carousel.css";
+import { Link } from "react-router-dom";
 
 export default function Carousel() {
   return (
@@ -54,9 +55,11 @@ export default function Carousel() {
             />
             <div class="carousel-caption">
               <h1>Nouveautés ça vient d'arrivées dans votre boutique.</h1>
-              <button type="button" className="btn btn-dark p-2 fs-4 mt-2">
-                Découvrir
-              </button>
+              <Link to="/nouveautes">
+                <button type="button" className="btn btn-dark p-2 fs-4 mt-2">
+                  Découvrir
+                </button>
+              </Link>
             </div>
           </div>
 

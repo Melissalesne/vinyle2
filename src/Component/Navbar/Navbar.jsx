@@ -118,7 +118,7 @@ export default function Navbar() {
             </ul>
             <div className="box1 m-3">
               <input type="text" placeholder="Artiste, label, titre..." />
-              <a href="#">
+              <a href="/">
                 <i className="fas fa-search"></i>
               </a>
             </div>

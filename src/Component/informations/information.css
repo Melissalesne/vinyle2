@@ -7,15 +7,17 @@
     margin-top: 10%;
 }
 
-.section-infos {
-    background-color:rgba(9, 9, 9, 0.889);
-    /* margin:10px; */
-    
+.container-box:hover{
+    background-image: linear-gradient(to right top, #3f3636, #7e6b66, #bfa899, #ffebce);
+    color:black;
+
 }
 
 
+
+
 p {
-    color: white;
+    color:black;
     text-align: justify;
 }
 
