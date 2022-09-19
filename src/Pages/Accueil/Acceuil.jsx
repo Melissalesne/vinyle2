@@ -10,12 +10,10 @@ import "./acceuil.css";
 export default function Acceuil() {
   return (
     <div>
-      <Navbar />
       <Carousel />
       <Recherche />
       <Category />
       <Informations />
-      <Footer />
     </div>
   );
 }
