@@ -6,15 +6,15 @@ export default function Inscription() {
   return (
     <div className="container">
       <div className="form mt-5">
-        <div className="row">
-          <div className="col-md-6">
+        <div className=" row">
+          <div className="col-md-6 shadow bg-body rounded">
             <img
               className="img-fluid"
               src="./assets/images/register.png"
               alt=""
             />
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6 bg-dark text-white rounded-2">
             <div className="row px-3 mb-4">
               <div className="top-part d-flex align-items-center">
                 <div className="text me-3">
