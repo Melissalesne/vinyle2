@@ -123,10 +123,10 @@ export default function Navbar() {
               </a>
             </div>
             <ul className="navbar-nav ml-auto">
-              <NavLink to="/connexion">
+              <NavLink to="/inscription">
                 <li className="nav-item">
                   <a className="nav-link text-white fs-4" href="/">
-                    <span>Se connecter</span>
+                    <span>Compte</span>
                     <i class="fa-solid fa-user p-2"></i>
                   </a>
                 </li>

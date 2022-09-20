@@ -5,6 +5,8 @@ import "./App.css";
 import Acceuil from "./Pages/Accueil/Acceuil";
 import BaseScreen from "./Pages/baseScreen";
 import React, { Suspense } from "react";
+import NoNavbarScreen from "./Pages/noNavbarScreen";
+import Connexion from "./Pages/Connexion/Connexion";
 
 const Nouveautes = React.lazy(() => import("./Pages/Nouveautes/Nouveautes"));
 const Ventes = React.lazy(() => import("./Pages/Top-ventes/Ventes"));
@@ -22,7 +24,7 @@ const BandesOriginal = React.lazy(() =>
 const Reggae = React.lazy(() => import("./Pages/Reggae/Reggae"));
 const Electro = React.lazy(() => import("./Pages/Electro/Electro"));
 const Histoire = React.lazy(() => import("./Pages/histoireDuVinyle/histoire"));
-const Connexion = React.lazy(() => import("./Pages/Connexion/Connexion"));
+const Inscription = React.lazy(() => import("./Pages/Inscription/Inscription"));
 const Panier = React.lazy(() => import("./Pages/Panier/Panier"));
 
 function App() {
@@ -136,14 +138,26 @@ function App() {
                 </Suspense>
               }
             />
+          </Route>
+          <Route path="/" element={<NoNavbarScreen />}>
             <Route
-              path="/connexion"
+              path="/inscription"
               element={
                 <Suspense fallback={<span>Chargement</span>}>
-                  <Connexion />
+                  <Inscription />
                 </Suspense>
               }
             />
+            <Route path="/" element={<NoNavbarScreen />}>
+              <Route
+                path="/connexion"
+                element={
+                  <Suspense fallback={<span>Chargement</span>}>
+                    <Connexion />
+                  </Suspense>
+                }
+              />
+            </Route>
             <Route
               path="/panier"
               element={
