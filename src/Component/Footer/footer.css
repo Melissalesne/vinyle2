@@ -1,0 +1,25 @@
+.main_footer{
+    background-image: linear-gradient(to right top, #3f3737, #6e605d, #9a8678, #fce4c1);
+}
+
+
+
+.list {
+    list-style-type: none;
+    font-family: 'Lora', serif;
+    cursor: pointer;
+    color:white;
+}
+
+h4{
+    font-family: 'Lora', serif;
+}
+
+.para {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.main_container {
+   margin:18px;
+}
