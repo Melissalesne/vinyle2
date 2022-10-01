@@ -7,21 +7,18 @@
     margin-top: 10%;
 }
 
-.container-box:hover{
-    /* background-image: linear-gradient(to right top, #3f3636, #7e6b66, #bfa899, #ffebce); */
-    /* background-image: linear-gradient(to right bottom, #605454, #917e79, #ebcdb9, #ffebce); */
-  
-    color:black;
-
+.container-box{
+    margin: 4px;
+    
 }
 
-
-
-
+.text-center {
+    font-family: 'Lora', serif;
+}
 p {
     color:black;
     text-align: justify;
-    font-family: 'Times New Roman', Times, serif;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 

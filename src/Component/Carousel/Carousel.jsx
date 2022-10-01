@@ -77,7 +77,7 @@ export default function Carousel() {
             </div>
           </div>
         </div>
-        <button
+        {/* <button
           class="carousel-control-prev"
           type="button"
           data-bs-target="#carouselExampleCaptions"
@@ -94,7 +94,7 @@ export default function Carousel() {
         >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
-        </button>
+        </button> */}
       </div>
     </div>
   );

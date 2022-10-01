@@ -1,25 +1,33 @@
-.main_footer{
-    background-image: linear-gradient(to right top, #3f3737, #6e605d, #9a8678, #fce4c1);
+.main_footer {
+    background-image: linear-gradient(to right bottom, #3f3737, #6e605d, #9a8678, #fcdba9);
+    margin-top: 100px;
 }
-
 
 
 .list {
     list-style-type: none;
     font-family: 'Lora', serif;
     cursor: pointer;
+    font-size: 1.1em;
+    
+}
+
+.a-list {
     color:white;
-}
-
-h4{
-    font-family: 'Lora', serif;
-}
-
-.para {
+    list-style-type: none;
     font-size: 1.2em;
+}
+
+li a {
+    color:black;
+}
+li a:hover {
+    color:black;
+}
+
+
+
+.footer-para {
     text-align: center;
 }
 
-.main_container {
-   margin:18px;
-}
