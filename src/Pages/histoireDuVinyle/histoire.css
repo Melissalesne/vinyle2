@@ -1,0 +1,42 @@
+.section-container{
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10%;
+    width:80%;
+    margin: auto;
+    margin-top: 3%;
+  
+}
+
+.titre_histoire {
+
+    text-align: center;
+    margin-top: 8%;
+    color: #8e623c;
+    background-image: linear-gradient(to right top, #b57842, #9b6538, #81522e, #674125, #4f301b);
+    font-weight: 600;
+    background-clip: text;
+  
+   
+
+}
+
+
+
+.image-histoire img {
+    border-radius: 5%;
+}
+
+.title-histoire {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+}
+
+.paragraphe{
+    margin-top:1%;
+    text-align: justify;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+
+}

@@ -72,25 +72,25 @@ export default function Footer() {
 
         <div className="col-md-2">
           <li className=" my-2 a-list ">Suivez nous</li>
-          <ul className="list d-flex align-item-center justify-content-md-start">
+          <ul className="list d-flex align-item-center justify-content-center">
             <li>
               <a href="/" className="text-dark">
-                <i className="fa-brands fa-facebook me-2 fa-2x"></i>
+                <i className="fa-brands fa-facebook me-2 fa-1x"></i>
               </a>
             </li>
             <li>
               <a href="/" className="text-dark">
-                <i className="fa-brands fa-twitter mx-2 fa-2x"></i>
+                <i className="fa-brands fa-twitter mx-2 fa-1x"></i>
               </a>
             </li>
             <li>
               <a href="/" className="text-dark">
-                <i className="fa-brands fa-instagram mx-2 fa-2x"></i>
+                <i className="fa-brands fa-instagram mx-2 fa-1x"></i>
               </a>
             </li>
             <li>
               <a href="/" className="text-dark">
-                <i className="fa-brands fa-linkedin mx-2 fa-2x"></i>
+                <i className="fa-brands fa-linkedin mx-2 fa-1x"></i>
               </a>
             </li>
           </ul>
