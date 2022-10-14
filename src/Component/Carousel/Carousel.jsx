@@ -41,7 +41,9 @@ export default function Carousel() {
             />
 
             <div class="carousel-caption">
-              <h1>Bienvenue dans votre boutique Vinyle Remenber</h1>
+              <h1 className="title-carousel">
+                Bienvenue dans votre boutique Vinyle Remenber
+              </h1>
               <Link to="/histoire">
                 <button type="button" className="btn btn-dark p-2 fs-4 mt-2">
                   Découvrir
@@ -56,7 +58,9 @@ export default function Carousel() {
               alt="..."
             />
             <div class="carousel-caption">
-              <h1>Nouveautés ça vient d'arrivées dans votre boutique.</h1>
+              <h1 className="title-carousel">
+                Nouveautés ça vient d'arrivées dans votre boutique.
+              </h1>
               <Link to="/nouveautes">
                 <button type="button" className="btn btn-dark p-2 fs-4 mt-2">
                   Découvrir
@@ -72,7 +76,9 @@ export default function Carousel() {
               alt="..."
             />
             <div class="carousel-caption">
-              <h1>Top ventes des vinyles les plus vendus en 2022.</h1>
+              <h1 className="title-carousel">
+                Top ventes des vinyles les plus vendus en 2022.
+              </h1>
               <Link to="/ventes">
                 <button
                   type="button"

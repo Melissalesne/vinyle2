@@ -4,14 +4,15 @@ import "./histoire.css";
 export default function histoire() {
   return (
     <>
-      <h1 className="titre_histoire">
-        Il était une fois, l'arrivée du vinyle ...
-      </h1>
-      <div className="image-histoire d-flex justify-content-center mt-5">
-        <img src="./assets/images/histoirevinyle.jpg" alt="" />
-      </div>
-      <div className="section-container d-flex">
-        <h4 className="title-histoire">Qui à inventé le vinyle ?</h4>
+      <h1 className="titre_histoire">L'histoire du vinyle </h1>
+
+      <div className="section-container ">
+        <div className="image-histoire d-flex flex-wrap justify-content-center align-items-end mt-5">
+          <img src="./assets/images/disque.png" alt="" />
+        </div>
+        <h4 className="title-histoire text-center mt-4">
+          Qui à inventé le vinyle ?
+        </h4>
         <p className="paragraphe">
           A la fin du <strong>XIXe siècle </strong>apparaît le disque 78 tours,
           un type de disque phonographique joué sur un gramophone mécanique,
@@ -25,7 +26,9 @@ export default function histoire() {
           l’amplification électronique permet d’obtenir un son plus puissant et
           fiable.
         </p>
-        <h4 className="title-histoire">Le vinyle le plus rare au monde</h4>
+        <h4 className="title-histoire text-center mt-4">
+          Le vinyle le plus rare au monde
+        </h4>
         <p className="paragraphe">
           Le vinyle d’un album de<strong>Bob Dylan</strong> considéré comme l’un
           des plus rares au monde a été mis en vente sur Ebay ce mardi au prix
@@ -46,11 +49,13 @@ export default function histoire() {
           aurait pressé un nombre infime de copies du vinyle original avec les
           quatre titres.
         </p>
-        <h4 className="title-histoire">Les vieux vinyles très recherchés</h4>
+        <h4 className="title-histoire text-center mt-4">
+          Les vieux vinyles très recherchés
+        </h4>
         <p className="paragraphe">
           Le top 10 des vinyles les plus recherchés <strong>Elvis</strong>{" "}
           compte parmi les très recherchés, <strong>les Beatles</strong>{" "}
-          également. Mais, <strong>Double Fantasy de John Lennon</strong>
+          également. Mais, <strong>Double Fantasy de John Lennon </strong>
           fait beaucoup plus rage chez les collectionneurs. En effet, ce membre
           des Beatles a été assassiné par David Chapman après que celui-ci lui
           fasse dédicacer le disque. Ce disque est quasiment une pièce à

@@ -1,42 +1,47 @@
-.section-container{
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 10%;
-    width:80%;
+ .section-container{
+    width:70%;
     margin: auto;
-    margin-top: 3%;
-  
-}
+     
+} 
 
-.titre_histoire {
+ .titre_histoire {
 
     text-align: center;
-    margin-top: 8%;
-    color: #8e623c;
-    background-image: linear-gradient(to right top, #b57842, #9b6538, #81522e, #674125, #4f301b);
-    font-weight: 600;
-    background-clip: text;
-  
-   
-
+    margin-top: 10%;
+    color: black;
+    font-family: 'Artifika', serif;
+     
 }
-
-
 
 .image-histoire img {
-    border-radius: 5%;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin:8px;
+    background-position: center;
+    object-fit: cover;
+    -webkit-animation:spin 10s linear infinite;
+    -moz-animation:spin 10s linear infinite;
+     animation:spin 10s linear infinite;
+     }
+     @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+     @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+     @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
+
 }
 
+
 .title-histoire {
-    font-family: 'Lora', serif;
+    font-family: 'Kurale', serif;
     font-weight: 600;
+   
 }
 
 .paragraphe{
     margin-top:1%;
     text-align: justify;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Philosopher', sans-serif;
 
 
-}
+} 
+

@@ -9,6 +9,7 @@
     font-family: 'Lora', serif;
     cursor: pointer;
     font-size: 1.1em;
+    padding: 0;
     
 }
 
@@ -31,3 +32,13 @@ li a:hover {
     text-align: center;
 }
 
+.div_cont_footer {
+    display: flex;
+    flex-direction: row!important;
+    justify-content: center;
+    width: auto;
+}
+
+.section{
+    width: auto;
+}

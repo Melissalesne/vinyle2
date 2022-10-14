@@ -8,17 +8,17 @@ body {
 
 .navbar {
     /* background-color: #4b2801d0; */
-    background-image: linear-gradient(to right bottom, #3f3636, #7e6b66, #bfa899, #ffebce);
+    background-image: linear-gradient(to right top, #3f3636, #7e6b66, #bfa899, #ffebce);
    
 }
 .navbar-nav  a {
    text-decoration: none;
-   font-family: 'Lora', serif;
+   font-family: 'Kurale', serif;
   
    
 }
 .dropdown-menu a:hover{
-    background-image: linear-gradient(to right bottom, #3f3636, #7e6b66, #bfa899, #ffebce);
+    background-image: linear-gradient(to right top, #3f3636, #7e6b66, #bfa899, #ffebce);
     color: white;
 }
 

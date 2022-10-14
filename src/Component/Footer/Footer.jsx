@@ -4,8 +4,8 @@ import "./footer.css";
 export default function Footer() {
   return (
     <footer className="main_footer text-dark p-3">
-      <div className="row justify-content-around text-center ">
-        <div className="col-md-2 mt-5 ">
+      <div className="row justify-content-around text-center margin-auto ">
+        <div className="col-md-2 mt-5 mb-4 ">
           <img src="./assets/images/privacy.png" alt="" />
           <img src="./assets/images/mastercard.png" alt="" />
           <img src="./assets/images/visa.png" alt="" />

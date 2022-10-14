@@ -24,12 +24,12 @@ span{
 
 
 
-h1{
+.title-carousel{
     font-size: 2.5em;
     color:white;
     text-shadow: 4px 4px 2px #000000;
     font-weight:bold;
-    font-family: 'Artifika', serif;
+    font-family: 'Kurale', serif;
    
 }
 
