@@ -26,6 +26,7 @@ const Electro = React.lazy(() => import("./Pages/Electro/Electro"));
 const Histoire = React.lazy(() => import("./Pages/histoireDuVinyle/histoire"));
 const Inscription = React.lazy(() => import("./Pages/Inscription/Inscription"));
 const Panier = React.lazy(() => import("./Pages/Panier/Panier"));
+const Details = React.lazy(() => import("./Pages/Details/details"));
 
 function App() {
   return (
@@ -163,6 +164,14 @@ function App() {
               element={
                 <Suspense fallback={<span>Chargement</span>}>
                   <Panier />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/details"
+              element={
+                <Suspense fallback={<span>Chargement</span>}>
+                  <Details />
                 </Suspense>
               }
             />
