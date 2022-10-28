@@ -1,0 +1,61 @@
+.card_container{
+    padding-top: 10%;
+}
+
+.card-img-top-categorie{
+    width: 200px;
+    height: 200px;
+
+}
+
+.card-title-singer {
+    font-family: 'Kurale', serif;
+}
+
+.card-text-music {
+    font-family: 'Kurale', serif;
+    font-size: 22px;
+
+}
+.button-arrow--black {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    overflow: hidden;
+    border-radius: 5px;
+    border: none;
+    background-color: #b39785;
+    text-decoration: none;
+    font-family: 'Artifika', serif; 
+    font-size: 18px;
+    
+    
+  }
+ 
+  .button-arrow--black:hover {
+    border-radius: 5px;
+    padding-right: 24px;
+    padding-left:8px;
+    color: #fff;
+  }
+  .button-arrow--black:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+  .button-arrow--black:after {
+    content: "\1F6D2";
+    position: absolute;
+    opacity: 0;
+    font-size: 20px;
+    line-height: 40px;
+    top: 0;
+    right: -20px;
+    transition: 0.4s;
+  }

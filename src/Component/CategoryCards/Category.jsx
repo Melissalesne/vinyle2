@@ -5,9 +5,7 @@ import "./category.css";
 export default function Category() {
   return (
     <>
-      <h2 className="titre_category text-center">
-        Découvrez nos catégories de vinyles
-      </h2>
+      <h2 className="titre_category text-center">Genres Musicaux</h2>
       <div className="container mt-5">
         <div className="row row-cols-1 row-cols-md-4 g-3 ">
           <div className="col">

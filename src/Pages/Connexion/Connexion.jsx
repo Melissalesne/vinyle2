@@ -6,18 +6,18 @@ export default function Connexion() {
   return (
     <div className="container">
       <div className="login-form mt-4">
-        <div className="row">
-          <div className="col-md-6 shadow bg-body rounded">
+        <div className="row justify-content-center">
+          {/* <div className="col-md-6 shadow bg-body rounded">
             <img
               className="img-fluid"
               src="./assets/images/register.png"
               alt=""
             />
-          </div>
-          <div className="col-md-6 bg-dark text-white rounded-2">
+          </div> */}
+          <div className=" col-md-6 bg-dark text-white rounded-3">
             <div className="row px-3 mb-4">
               <div className="top-part d-flex align-items-center">
-                <div className="text">
+                <div className="text me-3">
                   <h5>Connectez-vous</h5>
                 </div>
               </div>
@@ -31,7 +31,7 @@ export default function Connexion() {
                   </label>
                   <input
                     type="email"
-                    class="form-control"
+                    class="form-control rounded-pill"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
                   />
@@ -42,7 +42,7 @@ export default function Connexion() {
                   </label>
                   <input
                     type="password"
-                    class="form-control"
+                    class="form-control rounded-pill"
                     id="exampleInputPassword1"
                   />
                 </div>

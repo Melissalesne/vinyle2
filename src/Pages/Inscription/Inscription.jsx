@@ -6,15 +6,15 @@ export default function Inscription() {
   return (
     <div className="container">
       <div className="form mt-5">
-        <div className=" row">
-          <div className="col-md-6 shadow bg-body rounded">
+        <div className=" row justify-content-center">
+          {/* <div className="col-md-6 shadow bg-body rounded">
             <img
               className="img-fluid"
               src="./assets/images/register.png"
               alt=""
             />
-          </div>
-          <div className="col-md-6 bg-dark text-white rounded-2">
+          </div> */}
+          <div className=" col-md-6 bg-dark text-white rounded-3">
             <div className="row px-3 mb-4">
               <div className="top-part d-flex align-items-center">
                 <div className="text me-3">
@@ -31,7 +31,7 @@ export default function Inscription() {
                       <label className="form-label">Votre nom</label>
                       <input
                         type="text"
-                        class="form-control"
+                        class="form-control rounded-pill"
                         placeholder=" votre nom"
                         aria-label="First name"
                       />
@@ -40,7 +40,7 @@ export default function Inscription() {
                       <label className="form-label">Votre prénom</label>
                       <input
                         type="text"
-                        class="form-control"
+                        class="form-control rounded-pill"
                         placeholder=" votre prénom"
                         aria-label="Last name"
                       />
@@ -52,8 +52,8 @@ export default function Inscription() {
                     votre numéro de téléphone
                   </label>
                   <input
-                    type="number"
-                    class="form-control"
+                    type="text"
+                    class="form-control rounded-pill"
                     id="exampleInputPhone"
                     aria-describedby="PhoneHelp"
                   />
@@ -64,7 +64,7 @@ export default function Inscription() {
                   </label>
                   <input
                     type="email"
-                    class="form-control"
+                    class="form-control rounded-pill"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
                   />
@@ -75,7 +75,7 @@ export default function Inscription() {
                   </label>
                   <input
                     type="password"
-                    class="form-control"
+                    class="form-control rounded-pill"
                     id="exampleInputPassword1"
                   />
                 </div>
