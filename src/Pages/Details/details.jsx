@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function details() {
   return (
     <div className="detail_container m-4">
-      <div className="row">
+      <div className="row align-items-center justify-content-center">
         <div className="col-md-4 mt-2">
           <img src="./assets/images/imagin.png" className="img-fluid" alt="" />
         </div>
