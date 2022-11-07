@@ -67,7 +67,7 @@ export default function Category() {
           <div className="col">
             <div className="card">
               <img
-                src="./assets/images/classique.jpg"
+                src="./assets/images/classique1.jpg"
                 className="card-img-top"
                 alt="..."
               />

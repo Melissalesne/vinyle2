@@ -1,3 +1,16 @@
+body {
+    /* background: #b27641; */
+    background: #5d371f;
+   
+   
+}
+
+.bgForm {
+    background-color: rgba(0,0,0,.8);
+    box-shadow: 0 0 10px rgba(255,255,255,.3);
+   
+}
+
 
 .enregistrer-button {
     background-color: black;

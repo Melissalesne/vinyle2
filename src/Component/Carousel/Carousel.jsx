@@ -53,7 +53,7 @@ export default function Carousel() {
           </div>
           <div class="carousel-item">
             <img
-              src="./assets/images/nouveaute.jpg"
+              src="./assets/images/nouveaute1.jpg"
               class="d-block w-100"
               alt="..."
             />

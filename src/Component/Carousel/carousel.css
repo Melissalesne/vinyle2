@@ -3,8 +3,8 @@
     height: 80vh;
     object-fit: cover;
     object-position: center;
-    -webkit-filter : grayscale(40%); 
-    filter : grayscale(40%);
+    filter: contrast(120%)saturate(100%)  grayscale(40%) brightness(80%);
+    
 } 
 
 .carousel-caption h1 {
