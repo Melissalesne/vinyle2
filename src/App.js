@@ -5,7 +5,6 @@ import "./App.css";
 import Acceuil from "./Pages/Accueil/Acceuil";
 import BaseScreen from "./Pages/baseScreen";
 import React, { Suspense } from "react";
-import NoNavbarScreen from "./Pages/noNavbarScreen";
 import Connexion from "./Pages/Connexion/Connexion";
 
 const Nouveautes = React.lazy(() => import("./Pages/Nouveautes/Nouveautes"));
@@ -139,26 +138,6 @@ function App() {
                 </Suspense>
               }
             />
-          </Route>
-          <Route path="/" element={<NoNavbarScreen />}>
-            <Route
-              path="/inscription"
-              element={
-                <Suspense fallback={<span>Chargement</span>}>
-                  <Inscription />
-                </Suspense>
-              }
-            />
-            <Route path="/" element={<NoNavbarScreen />}>
-              <Route
-                path="/connexion"
-                element={
-                  <Suspense fallback={<span>Chargement</span>}>
-                    <Connexion />
-                  </Suspense>
-                }
-              />
-            </Route>
             <Route
               path="/panier"
               element={
@@ -176,6 +155,26 @@ function App() {
               }
             />
           </Route>
+          {/* <Route path="/" element={<NoNavbarScreen />}> */}
+          <Route
+            path="/inscription"
+            element={
+              <Suspense fallback={<span>Chargement</span>}>
+                <Inscription />
+              </Suspense>
+            }
+          />
+          {/* <Route path="/" element={<NoNavbarScreen />}> */}
+          <Route
+            path="/connexion"
+            element={
+              <Suspense fallback={<span>Chargement</span>}>
+                <Connexion />
+              </Suspense>
+            }
+          />
+          {/* </Route> */}
+          {/* </Route> */}
         </Routes>
       </BrowserRouter>
     </div>

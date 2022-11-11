@@ -6,10 +6,10 @@ export default function details() {
   return (
     <div className="detail_container m-4">
       <div className="row align-items-center justify-content-center">
-        <div className="col-md-4 mt-2">
+        <div className="bloc-detail col-md-4 ">
           <img src="./assets/images/imagin.png" className="img-fluid" alt="" />
         </div>
-        <div className="col-md-4 my-auto">
+        <div className="bloc-detail-text col-md-4 ">
           <h5 className="card-detail-singer">Imagine Dragon's</h5>
           <h6 className="card-text-detail">Bones</h6>
           <h6 className="card-detail-price">15€00</h6>

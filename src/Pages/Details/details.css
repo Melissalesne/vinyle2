@@ -43,3 +43,11 @@
     right: -20px;
     transition: 0.4s;
   }
+
+  .bloc-detail {
+    margin-top: 5%;
+  }
+
+  .bloc-detail-text {
+    margin-top: 5%;
+  }

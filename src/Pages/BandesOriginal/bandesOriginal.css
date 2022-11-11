@@ -79,3 +79,7 @@
     right: -20px;
     transition: 0.4s;
   }
+
+  .card-text-price{
+    color: #a56b38;
+  }
