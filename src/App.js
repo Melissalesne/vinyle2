@@ -154,25 +154,26 @@ function App() {
                 </Suspense>
               }
             />
+            <Route
+              path="/inscription"
+              element={
+                <Suspense fallback={<span>Chargement</span>}>
+                  <Inscription />
+                </Suspense>
+              }
+            />
+            {/* <Route path="/" element={<NoNavbarScreen />}> */}
+            <Route
+              path="/connexion"
+              element={
+                <Suspense fallback={<span>Chargement</span>}>
+                  <Connexion />
+                </Suspense>
+              }
+            />
           </Route>
           {/* <Route path="/" element={<NoNavbarScreen />}> */}
-          <Route
-            path="/inscription"
-            element={
-              <Suspense fallback={<span>Chargement</span>}>
-                <Inscription />
-              </Suspense>
-            }
-          />
-          {/* <Route path="/" element={<NoNavbarScreen />}> */}
-          <Route
-            path="/connexion"
-            element={
-              <Suspense fallback={<span>Chargement</span>}>
-                <Connexion />
-              </Suspense>
-            }
-          />
+
           {/* </Route> */}
           {/* </Route> */}
         </Routes>

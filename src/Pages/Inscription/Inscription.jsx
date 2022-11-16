@@ -15,7 +15,7 @@ export default function Inscription() {
               alt=""
             />
           </div> */}
-            <div className=" bgForm col-md-6  text-white rounded-3">
+            <div className=" bgForm col-md-6 bg-dark  text-white rounded-3">
               <div className="row px-3 mb-4">
                 <div className="top-part d-flex align-items-center">
                   <div className="text me-3">
