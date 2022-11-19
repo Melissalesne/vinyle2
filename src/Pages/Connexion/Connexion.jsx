@@ -3,17 +3,26 @@ import { Link } from "react-router-dom";
 import "./connexion.css";
 
 export default function Connexion() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const jsonData = Object.fromEntries(formData.entries());
+    console.log(jsonData);
+
+    fetch("http://vr-api/auth/connexion", {
+      method: "POST",
+      body: JSON.stringify(jsonData),
+    })
+      .then((resp) => resp.json())
+      .then((json) => {
+        console.log(json);
+      });
+  };
+
   return (
     <div className="container">
       <div className="login-form mt-4">
         <div className="row justify-content-center">
-          {/* <div className="col-md-6 shadow bg-body rounded">
-            <img
-              className="img-fluid"
-              src="./assets/images/register.png"
-              alt=""
-            />
-          </div> */}
           <div className=" col-md-6 bg-dark text-white rounded-3">
             <div className="row px-3 mb-4">
               <div className="top-part d-flex align-items-center">
@@ -24,26 +33,28 @@ export default function Connexion() {
             </div>
 
             <div className="row px-3 mb-4">
-              <form>
+              <form onSubmit={handleSubmit} noValidate>
                 <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">
+                  <label htmlfor="exampleInputEmail1" class="form-label">
                     Email
                   </label>
                   <input
                     type="email"
+                    name="email"
                     class="form-control rounded-pill"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">
+                  <label htmlfor="exampleInputPassword1" class="form-label">
                     Mot de passe
                   </label>
                   <input
-                    type="password"
+                    type="mot-de-passe"
+                    name="mot_de_passe"
                     class="form-control rounded-pill"
-                    id="exampleInputPassword1"
+                    id="exampleInputmotDePasse1"
                   />
                 </div>
                 <div class="mb-3 form-check">

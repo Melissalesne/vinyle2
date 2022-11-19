@@ -117,20 +117,22 @@ export default function Navbar() {
               </NavLink>
             </ul>
             <div className="box1 m-3">
-              <input type="text" placeholder="Artiste, label, titre..." />
+              <input type="text" placeholder="Je recherche artiste, label..." />
               <a href="/">
                 <i className="fas fa-search"></i>
               </a>
             </div>
             <ul className="navbar-nav ml-auto">
-              <NavLink to="/inscription">
-                <li className="nav-item">
-                  <a className="nav-link text-white fs-4" href="/">
-                    <span>Compte</span>
-                    <i class="fa-solid fa-user p-2"></i>
-                  </a>
-                </li>
-              </NavLink>
+              {
+                <NavLink to="/connexion">
+                  <li className="nav-item">
+                    <a className="nav-link text-white fs-4" href="/">
+                      <span>Compte</span>
+                      <i class="fa-solid fa-user p-2"></i>
+                    </a>
+                  </li>
+                </NavLink>
+              }
               <NavLink to="/panier">
                 <li className="nav-item">
                   <a className="nav-link text-white fs-4" href="/">

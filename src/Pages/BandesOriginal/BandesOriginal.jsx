@@ -1,21 +1,8 @@
 import React from "react";
 import "./bandesOriginal.css";
 import { Link } from "react-router-dom";
-// import axios from "axios";
-import { useEffect, useState } from "react";
 
 export default function BandesOriginal() {
-  //   const [artiste, setArtiste] = useState([]);
-  //   const [label, setLabel] = useState([]);
-  //   const [titre, setTitre] = useState([]);
-
-  //   useEffect(() => {
-  //     const fetchData = async () => {
-  //       try {
-  //         const { data: response } = await axios.get(
-  //           'https://api.discogs.com/',
-  //         );
-
   return (
     <div className="card_container mt-5 m-4">
       <div className="row text-center align-items-center justify-content-center g-4">

@@ -65,7 +65,6 @@ function App() {
                 </Suspense>
               }
             />
-
             <Route
               path="/popRock"
               element={
@@ -162,7 +161,7 @@ function App() {
                 </Suspense>
               }
             />
-            {/* <Route path="/" element={<NoNavbarScreen />}> */}
+            ){/* <Route path="/" element={<NoNavbarScreen />}> */}
             <Route
               path="/connexion"
               element={
@@ -171,6 +170,7 @@ function App() {
                 </Suspense>
               }
             />
+            )
           </Route>
           {/* <Route path="/" element={<NoNavbarScreen />}> */}
 

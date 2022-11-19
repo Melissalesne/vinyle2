@@ -1,20 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
 import "./inscription.css";
 
 export default function Inscription() {
+  const {
+    inscription,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const formInvalid = () => console.log("Errors", errors);
+
+  const formSubmit = (data) => console.log("Validated Data", data);
+
   return (
     <body>
       <div className="container">
         <div className="form mt-5">
           <div className=" row justify-content-center">
-            {/* <div className="col-md-6 shadow bg-body rounded">
-            <img
-              className="img-fluid"
-              src="./assets/images/register.png"
-              alt=""
-            />
-          </div> */}
             <div className=" bgForm col-md-6 bg-dark  text-white rounded-3">
               <div className="row px-3 mb-4">
                 <div className="top-part d-flex align-items-center">
