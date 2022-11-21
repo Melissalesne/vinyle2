@@ -1,13 +1,22 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import "./App.css";
 import Acceuil from "./Pages/Accueil/Acceuil";
 import BaseScreen from "./Pages/baseScreen";
 import React, { Suspense } from "react";
-import Connexion from "./Pages/Connexion/Connexion";
+// import Connexion from "./Pages/Connexion/Connexion";
+// import Inscription from "./Pages/Inscription/Inscription";
+import { AuthContext } from "./contexts/AuthContext";
+import { useContext } from "react";
+import Connecte from "./Pages/Connecte";
+import Compte from "./Pages/Compte";
+import Admin from "./Pages/Admin";
 
 const Nouveautes = React.lazy(() => import("./Pages/Nouveautes/Nouveautes"));
+const Inscription = React.lazy(() => import("./Pages/Inscription/Inscription"));
+const Connexion = React.lazy(() => import("./Pages/Connexion/Connexion"));
 const Ventes = React.lazy(() => import("./Pages/Top-ventes/Ventes"));
 const Genres = React.lazy(() => import("./Pages/Genres/Genres"));
 const PopRock = React.lazy(() => import("./Pages/PopRock/PopRock"));
@@ -23,14 +32,33 @@ const BandesOriginal = React.lazy(() =>
 const Reggae = React.lazy(() => import("./Pages/Reggae/Reggae"));
 const Electro = React.lazy(() => import("./Pages/Electro/Electro"));
 const Histoire = React.lazy(() => import("./Pages/histoireDuVinyle/histoire"));
-const Inscription = React.lazy(() => import("./Pages/Inscription/Inscription"));
 const Panier = React.lazy(() => import("./Pages/Panier/Panier"));
 const Details = React.lazy(() => import("./Pages/Details/details"));
 
 function App() {
+  const { auth } = useContext(AuthContext);
+
   return (
     <div>
       <BrowserRouter>
+        <div className="">
+          {auth.role === 3 && (
+            <Link to="/admin" className="btn btn-sm btn-dark me-2">
+              Admin
+            </Link>
+          )}
+          {auth.role > 0 && (
+            <Link to="/compte" className="btn btn-sm btn-dark me-2">
+              Compte
+            </Link>
+          )}
+          {auth.role > 0 && (
+            <Link to="/connecte" className="btn btn-sm btn-dark me-2">
+              Connecté
+            </Link>
+          )}
+        </div>
+
         <Routes>
           <Route path="/" element={<BaseScreen />}>
             <Route
@@ -101,6 +129,7 @@ function App() {
               path="/classique"
               element={
                 <Suspense fallback={<span>Chargement</span>}>
+                  {" "}
                   <Classique />
                 </Suspense>
               }
@@ -153,6 +182,37 @@ function App() {
                 </Suspense>
               }
             />
+            {auth.role > 0 && (
+              <Route
+                path="/connecte"
+                element={
+                  <Suspense fallback={<span>Chargement</span>}>
+                    <Connecte />
+                  </Suspense>
+                }
+              />
+            )}
+            {auth.role > 0 && (
+              <Route
+                path="/compte"
+                element={
+                  <Suspense fallback={<span>Chargement</span>}>
+                    <Compte />
+                  </Suspense>
+                }
+              />
+            )}
+            {auth.role === 3 && (
+              <Route
+                path="/admin"
+                element={
+                  <Suspense fallback={<span>Chargement</span>}>
+                    <Admin />
+                  </Suspense>
+                }
+              />
+            )}
+
             <Route
               path="/inscription"
               element={
@@ -161,7 +221,7 @@ function App() {
                 </Suspense>
               }
             />
-            ){/* <Route path="/" element={<NoNavbarScreen />}> */}
+
             <Route
               path="/connexion"
               element={
@@ -170,8 +230,8 @@ function App() {
                 </Suspense>
               }
             />
-            )
           </Route>
+
           {/* <Route path="/" element={<NoNavbarScreen />}> */}
 
           {/* </Route> */}
