@@ -1,0 +1,29 @@
+.panier-img{
+    height: 150px;
+}
+
+.panier {
+    text-align: center;
+    font-family: 'Kurale', serif;
+    
+}
+.intitule{
+    text-align: center;
+    font-size: 1.1em;
+    font-family: 'Philosopher', sans-serif;
+   
+
+}
+
+.container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: stretch;
+}
+
+.form-check-input {
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: flex-end;
+}

@@ -25,7 +25,8 @@ export default function BandesOriginal() {
             </div>
           </div>
         </div>
-        <div className="col-lg-3 mt-3">
+        ;
+        {/* <div className="col-lg-3 mt-3">
           <div className="card-categorie">
             <img
               src="./assets/images/vinyle.png"
@@ -233,7 +234,7 @@ export default function BandesOriginal() {
               </Link>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

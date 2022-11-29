@@ -4,16 +4,6 @@ import { useForm } from "react-hook-form";
 import "./inscription.css";
 
 export default function Inscription() {
-  const {
-    inscription,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-
-  const formInvalid = () => console.log("Errors", errors);
-
-  const formSubmit = (data) => console.log("Validated Data", data);
-
   return (
     <body>
       <div className="container">

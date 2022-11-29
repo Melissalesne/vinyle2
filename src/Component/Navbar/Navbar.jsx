@@ -8,9 +8,7 @@ export default function Navbar() {
       <nav className="navbar   navbar-expand-lg p-3">
         <div className="container-fluid">
           <NavLink to="/">
-            <a className="navbar-brand" href="/">
-              <img src="./assets/images/vinyleremenber2.png"></img>
-            </a>
+            <img src="./assets/images/vinyleremenber2.png"></img>
           </NavLink>
           <button
             className="navbar-toggler"
@@ -26,7 +24,7 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <NavLink to="/nouveautes">
-                <li className="nav-item">
+                <li className="nav-item ">
                   <a
                     className="nav-link text-white fs-4"
                     aria-current="page"
@@ -117,7 +115,10 @@ export default function Navbar() {
               </NavLink>
             </ul>
             <div className="box1 m-3">
-              <input type="text" placeholder="Je recherche artiste, label..." />
+              <input
+                placeholder="Je recherche artiste, label..."
+                type="input"
+              ></input>
               <a href="/">
                 <i className="fas fa-search"></i>
               </a>
@@ -136,7 +137,7 @@ export default function Navbar() {
               <NavLink to="/panier">
                 <li className="nav-item">
                   <a className="nav-link text-white fs-4" href="/">
-                    <span>Mon panier</span>
+                    <span> panier</span>
                     <i class="fa-solid fa-cart-shopping p-2"></i>
                   </a>
                 </li>

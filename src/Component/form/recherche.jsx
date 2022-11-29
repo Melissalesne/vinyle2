@@ -1,6 +1,5 @@
 import React from "react";
-import "./recherche.css";
 
-export default function recherche() {
-  return <div></div>;
+export default function Recherche() {
+  return <div>recherche</div>;
 }

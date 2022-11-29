@@ -42,7 +42,8 @@ function App() {
     <div>
       <BrowserRouter>
         <div className="">
-          {auth.role === 3 && (
+          {" "}
+          {auth.role > 2 && (
             <Link to="/admin" className="btn btn-sm btn-dark me-2">
               Admin
             </Link>

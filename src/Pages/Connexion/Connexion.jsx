@@ -5,16 +5,17 @@ import { setCookie, deleteCookie } from "../../Helpers/cookieHelper";
 import "./connexion.css";
 
 export default function Connexion() {
-  const { setAuth } = useContext(AuthContext);
+  const { setAuth } = useContext(AuthContext); // ? utilise un use context
 
   const [valid, setValid] = useState({ email: false, mot_de_passe: false });
 
   const validForm = () => {
     const isValid = { email: false, mot_de_passe: false };
-    const exampleInputEmail1 = document.getElementById("exampleInputEmail1");
-    const emailPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    const exampleInputEmail1 = document.getElementById("exampleInputEmail1"); // ? selectionne l'input email
+    const emailPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/; // ? créer un regex
     if (emailPattern.test(exampleInputEmail1?.value)) {
-      isValid.email = true;
+      // ? on test l'email avec le regex pattern
+      isValid.email = true; // ? on set la validation d'mail a true
     }
     const exampleInputPassword1 = document.getElementById(
       "exampleInputmotDePasse1"
@@ -24,32 +25,36 @@ export default function Connexion() {
       isValid.mot_de_passe = true;
     }
     setValid(isValid);
-    return isValid.email === true && isValid.mot_de_passe === true;
+    return isValid.email === true && isValid.mot_de_passe === true; // ? return true si le mdp et l'email sont vrai
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // ? empeche les evenements par défaut
     const formData = new FormData(e.target);
     const jsonData = Object.fromEntries(formData.entries());
     console.log(jsonData);
 
     if (!validForm(jsonData)) {
+      // ? si les données du form ne sont pas valide on return
       return;
     }
 
     fetch("http://vr-api/auth/connexion", {
+      // ? je fait une requete à mon back
       method: "POST",
-      body: JSON.stringify(jsonData),
+      body: JSON.stringify(jsonData), // ? retourne les données  dans un tableau associatif
     })
       .then((resp) => resp.json())
       .then((json) => {
         console.log(json);
         if (json.data?.result) {
-          setAuth({ role: json.data?.role, id: json.data?.id });
+          // ? si le resultat de la requete est vrai
+          setAuth({ role: json.data.role, id: json.data.id }); // ? set l'utilisateur
           setCookie("vinyle_remenber", json.data.token, {
+            // ? stoke ds les cookies le token
             "max-age": 60 * 60 * 24,
           });
-          Navigate("/compte");
+          Navigate("/compte"); // ? on redirige l'utilisateur
         } else {
           setAuth({ role: 0 });
           deleteCookie("vinyle_remenber");
