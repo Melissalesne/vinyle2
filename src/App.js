@@ -31,6 +31,7 @@ const BandesOriginal = React.lazy(() =>
 );
 const Reggae = React.lazy(() => import("./Pages/Reggae/Reggae"));
 const Electro = React.lazy(() => import("./Pages/Electro/Electro"));
+const Categories = React.lazy(() => import("./Pages/Categories/categories"));
 const Histoire = React.lazy(() => import("./Pages/histoireDuVinyle/histoire"));
 const Panier = React.lazy(() => import("./Pages/Panier/Panier"));
 const Details = React.lazy(() => import("./Pages/Details/details"));
@@ -156,6 +157,14 @@ function App() {
               element={
                 <Suspense fallback={<span>Chargement</span>}>
                   <Electro />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/categories/:search"
+              element={
+                <Suspense fallback={<span>Chargement</span>}>
+                  <Categories />
                 </Suspense>
               }
             />

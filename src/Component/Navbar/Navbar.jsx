@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Recherche from "../form/Recherche";
 import "./navbar.css";
 
 export default function Navbar() {
@@ -114,15 +115,7 @@ export default function Navbar() {
                 </li>
               </NavLink>
             </ul>
-            <div className="box1 m-3">
-              <input
-                placeholder="Je recherche artiste, label..."
-                type="input"
-              ></input>
-              <a href="/">
-                <i className="fas fa-search"></i>
-              </a>
-            </div>
+            <Recherche />
             <ul className="navbar-nav ml-auto">
               {
                 <NavLink to="/connexion">
