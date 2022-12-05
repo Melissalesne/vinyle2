@@ -10,7 +10,7 @@ export default function histoire() {
         <div className="image-histoire d-flex flex-wrap justify-content-center align-items-end mt-5">
           <img src="./assets/images/disque.png" alt="" />
         </div>
-        <h4 className="title-histoire text-center mt-4">
+        <h4 className="title-histoire text-center mt-3">
           Qui à inventé le vinyle ?
         </h4>
         <p className="paragraphe">
