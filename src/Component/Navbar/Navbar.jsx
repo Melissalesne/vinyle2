@@ -122,7 +122,7 @@ export default function Navbar() {
                   <li className="nav-item">
                     <a className="nav-link text-white fs-4" href="/">
                       <span>Compte</span>
-                      <i class="fa-solid fa-user p-2"></i>
+                      <i className="fa-solid fa-user p-2"></i>
                     </a>
                   </li>
                 </NavLink>
@@ -131,7 +131,7 @@ export default function Navbar() {
                 <li className="nav-item">
                   <a className="nav-link text-white fs-4" href="/">
                     <span> panier</span>
-                    <i class="fa-solid fa-cart-shopping p-2"></i>
+                    <i className="fa-solid fa-cart-shopping p-2"></i>
                   </a>
                 </li>
               </NavLink>
