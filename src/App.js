@@ -10,9 +10,9 @@ import React, { Suspense } from "react";
 // import Inscription from "./Pages/Inscription/Inscription";
 import { AuthContext } from "./contexts/AuthContext";
 import { useContext } from "react";
-import Connecte from "./Pages/Connecte";
 import Compte from "./Pages/Compte";
 import Admin from "./Pages/Admin";
+import { deleteCookie } from "./Helpers/cookieHelper";
 
 const Nouveautes = React.lazy(() => import("./Pages/Nouveautes/Nouveautes"));
 const Inscription = React.lazy(() => import("./Pages/Inscription/Inscription"));
@@ -37,30 +37,11 @@ const Panier = React.lazy(() => import("./Pages/Panier/Panier"));
 const Details = React.lazy(() => import("./Pages/Details/details"));
 
 function App() {
-  const { auth } = useContext(AuthContext);
+  const { auth, setAuth } = useContext(AuthContext);
 
   return (
     <div>
       <BrowserRouter>
-        <div className="">
-          {" "}
-          {auth.role > 2 && (
-            <Link to="/admin" className="btn btn-sm btn-dark me-2">
-              Admin
-            </Link>
-          )}
-          {auth.role > 0 && (
-            <Link to="/compte" className="btn btn-sm btn-dark me-2">
-              Compte
-            </Link>
-          )}
-          {auth.role > 0 && (
-            <Link to="/connecte" className="btn btn-sm btn-dark me-2">
-              Connecté
-            </Link>
-          )}
-        </div>
-
         <Routes>
           <Route path="/" element={<BaseScreen />}>
             <Route
@@ -192,16 +173,7 @@ function App() {
                 </Suspense>
               }
             />
-            {auth.role > 0 && (
-              <Route
-                path="/connecte"
-                element={
-                  <Suspense fallback={<span>Chargement</span>}>
-                    <Connecte />
-                  </Suspense>
-                }
-              />
-            )}
+
             {auth.role > 0 && (
               <Route
                 path="/compte"

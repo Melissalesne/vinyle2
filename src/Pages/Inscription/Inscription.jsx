@@ -27,7 +27,6 @@ export default function Inscription() {
                         <input
                           type="text"
                           class="form-control rounded-pill"
-                          placeholder=" votre nom"
                           aria-label="First name"
                         />
                       </div>
@@ -36,7 +35,6 @@ export default function Inscription() {
                         <input
                           type="text"
                           class="form-control rounded-pill"
-                          placeholder=" votre prénom"
                           aria-label="Last name"
                         />
                       </div>
@@ -66,7 +64,7 @@ export default function Inscription() {
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">
-                      Password
+                      Mot de passe
                     </label>
                     <input
                       type="password"

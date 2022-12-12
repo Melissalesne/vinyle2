@@ -1,5 +1,17 @@
-import React from "react";
+import useFetch from "../hooks/useFetch";
 
-export default function Admin() {
-  return <div>Admin</div>;
+function Admin() {
+  const { data, loading, error, text } = useFetch("compte");
+  if (loading) return <div>Loading ...</div>;
+  if (error) {
+    console.log(error, text);
+    return <div>Error ! </div>;
+  }
+  return (
+    <>
+      <h1>AdminScreen</h1>
+      {data && data.map((item, i) => <div key={i}>{item.email}</div>)}
+    </>
+  );
 }
+export default Admin;

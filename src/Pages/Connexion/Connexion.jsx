@@ -1,12 +1,14 @@
 import React, { useState, useContext } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import { setCookie, deleteCookie } from "../../Helpers/cookieHelper";
+import doFetch from "../../Helpers/fetchHelpers";
+import useFetch from "../../hooks/useFetch";
 import "./connexion.css";
 
 export default function Connexion() {
   const { setAuth } = useContext(AuthContext); // ? utilise un use context
-
+  const navigate = useNavigate();
   const [valid, setValid] = useState({ email: false, mot_de_passe: false });
 
   const validForm = () => {
@@ -28,7 +30,7 @@ export default function Connexion() {
     return isValid.email === true && isValid.mot_de_passe === true; // ? return true si le mdp et l'email sont vrai
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault(); // ? empeche les evenements par défaut
     const formData = new FormData(e.target);
     const jsonData = Object.fromEntries(formData.entries());
@@ -39,27 +41,24 @@ export default function Connexion() {
       return;
     }
 
-    fetch("http://vr-api/auth/connexion", {
+    const { data } = await doFetch("auth/connexion", {
       // ? je fait une requete à mon back
       method: "POST",
       body: JSON.stringify(jsonData), // ? retourne les données  dans un tableau associatif
-    })
-      .then((resp) => resp.json())
-      .then((json) => {
-        console.log(json);
-        if (json.data?.result) {
-          // ? si le resultat de la requete est vrai
-          setAuth({ role: json.data.role, id: json.data.id }); // ? set l'utilisateur
-          setCookie("vinyle_remenber", json.data.token, {
-            // ? stoke ds les cookies le token
-            "max-age": 60 * 60 * 24,
-          });
-          Navigate("/compte"); // ? on redirige l'utilisateur
-        } else {
-          setAuth({ role: 0 });
-          deleteCookie("vinyle_remenber");
-        }
+    });
+
+    if (data?.data?.result) {
+      // ? si le resultat de la requete est vrai
+      setAuth({ role: data.data.role, id: data.data.id }); // ? set l'utilisateur
+      setCookie("vinyle_remenber", data.data.token, {
+        // ? stoke ds les cookies le token
+        "max-age": 60 * 60 * 24,
       });
+      navigate("/compte"); // ? on redirige l'utilisateur
+    } else {
+      setAuth({ role: 0, id: 0 });
+      deleteCookie("vinyle_remenber");
+    }
   };
 
   return (

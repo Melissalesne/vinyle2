@@ -1,9 +1,12 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import Recherche from "../form/Recherche";
 import "./navbar.css";
+import { AuthContext } from "../../contexts/AuthContext";
+import { setCookie, deleteCookie } from "../../Helpers/cookieHelper";
+import React, { useContext } from "react";
 
 export default function Navbar() {
+  const { setAuth } = useContext(AuthContext);
   return (
     <div>
       <nav className="navbar   navbar-expand-lg p-3">
@@ -117,6 +120,22 @@ export default function Navbar() {
             </ul>
             <Recherche />
             <ul className="navbar-nav ml-auto">
+              {
+                <NavLink
+                  to="/"
+                  onClick={(e) => {
+                    setAuth({ role: 0, id: 0 });
+                    deleteCookie("vinyle_remenber");
+                  }}
+                >
+                  <li className="nav-item">
+                    <a className="nav-link text-white fs-4" href="/">
+                      <span>Deconnexion</span>
+                      <i className="fa-solid fa-user p-2"></i>
+                    </a>
+                  </li>
+                </NavLink>
+              }
               {
                 <NavLink to="/connexion">
                   <li className="nav-item">
