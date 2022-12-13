@@ -1,11 +1,29 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import "./inscription.css";
+import React, { useState } from "react";
+import doFetch from "../../Helpers/fetchHelpers";
 
 export default function Inscription() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const formInvalid = (errors) => console.log("Errors", errors);
+
+  const [msg, setMsg] = useState("");
+  const formSubmit = async (formData) => {
+    const { data } = await doFetch("auth/register", {
+      method: "POST",
+      body: JSON.stringify(formData),
+    });
+    console.log(formData);
+    setMsg(data);
+  };
+
   return (
-    <body>
+    <div>
       <div className="container">
         <div className="form mt-5">
           <div className=" row justify-content-center">
@@ -18,64 +36,110 @@ export default function Inscription() {
                 </div>
               </div>
 
-              <div className="row px-3 mb-4">
+              <div
+                className="row px-3 mb-4"
+                onSubmit={handleSubmit(formSubmit, formInvalid)}
+              >
                 <form>
-                  <div class="mb-3">
-                    <div class="row">
-                      <div class="col">
-                        <label className="form-label">Votre nom</label>
+                  <div className="mb-3">
+                    <div className="row">
+                      <div className="col">
+                        <label htmlFor="name-input" className="form-label">
+                          nom{" "}
+                          <i className={"text-danger"}>
+                            {errors.nom ? " *" : " "}
+                          </i>
+                          Votre nom
+                        </label>
                         <input
+                          id="name-imput"
                           type="text"
-                          class="form-control rounded-pill"
-                          aria-label="First name"
+                          className="form-control rounded-pill"
+                          {...register("nom", {
+                            required: true,
+                            minLength: 3,
+                          })}
                         />
+                        <i className={"text-danger d-block"}>
+                          {errors.nom ? "* at least 3 chars" : " "}{" "}
+                        </i>
                       </div>
-                      <div class="col">
-                        <label className="form-label">Votre prénom</label>
+                      <div className="col">
+                        <label htmlFor="prenom-input" className="form-label">
+                          Votre prénom nom{" "}
+                          <i className={"text-danger"}>
+                            {errors.nom ? " *" : " "}
+                          </i>
+                        </label>
                         <input
+                          id="prenom-input"
                           type="text"
-                          class="form-control rounded-pill"
-                          aria-label="Last name"
+                          className="form-control rounded-pill"
+                          {...register("prenom", {
+                            required: true,
+                            minLength: 3,
+                          })}
                         />
+                        <i className={"text-danger d-block"}>
+                          {errors.prenom ? "* at least 3 chars" : " "}
+                        </i>
                       </div>
                     </div>
                   </div>
-                  <div class="mb-3">
-                    <label for="exampleInputPhone" class="form-label">
+                  <div className="mb-3">
+                    <label htmlFor="exampleInputPhone" className="form-label">
                       votre numéro de téléphone
                     </label>
                     <input
                       type="text"
-                      class="form-control rounded-pill"
+                      className="form-control rounded-pill"
+                      {...register("numeroDeTelephone", {
+                        required: false,
+                        minLength: 3,
+                      })}
                       id="exampleInputPhone"
                       aria-describedby="PhoneHelp"
                     />
                   </div>
-                  <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">
+                  <div className="mb-3">
+                    <label htmlFor="exampleInputEmail1" className="form-label">
                       votre email
                     </label>
+                    <i className={"text-danger"}>{errors.email ? " *" : " "}</i>
                     <input
                       type="email"
-                      class="form-control rounded-pill"
-                      id="exampleInputEmail1"
-                      aria-describedby="emailHelp"
+                      className="form-control rounded-pill"
+                      {...register("email", {
+                        required: true,
+                        pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i,
+                      })}
                     />
+                    <i className={"text-danger d-block"}>
+                      {errors.email ? "* must be a valid email address" : " "}
+                    </i>
                   </div>
-                  <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">
+                  <div className="mb-3">
+                    <label
+                      htmlFor="exampleInputPassword1"
+                      className="form-label"
+                    >
                       Mot de passe
                     </label>
                     <input
                       type="password"
-                      class="form-control rounded-pill"
+                      className="form-control rounded-pill"
+                      {...register("motDePasse", {
+                        required: false,
+                        minLength: 3,
+                      })}
                       id="exampleInputPassword1"
                     />
                   </div>
-                  <button type="submit" class="enregistrer-button">
+                  <button type="submit" className="enregistrer-button">
                     Enregistrer
                   </button>
                 </form>
+                <div className="text-primary">{msg}</div>
               </div>
 
               <div className="row px-3 mb-4">
@@ -92,6 +156,6 @@ export default function Inscription() {
           </div>
         </div>
       </div>
-    </body>
+    </div>
   );
 }

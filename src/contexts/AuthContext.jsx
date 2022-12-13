@@ -8,6 +8,12 @@ const AuthProvider = ({ children }) => {
   const [auth, setAuth] = useState({ role: 0 });
 
   useEffect(() => {
+    fetch("http://vr-api/compte", {
+      credentials: "include",
+      headers: {
+        Authorization: getCookie("vinyle_remenber"),
+      },
+    }).then((resp) => console.log(resp));
     fetch("http://vr-api/auth/check", {
       credentials: "include",
       headers: {

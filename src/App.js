@@ -174,7 +174,7 @@ function App() {
               }
             />
 
-            {auth.role > 0 && (
+            {/* {auth.role > 0 && (
               <Route
                 path="/compte"
                 element={
@@ -193,7 +193,7 @@ function App() {
                   </Suspense>
                 }
               />
-            )}
+            )} */}
 
             <Route
               path="/inscription"
