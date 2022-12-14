@@ -14,11 +14,11 @@ export default function Inscription() {
 
   const [msg, setMsg] = useState("");
   const formSubmit = async (formData) => {
-    const { data } = await doFetch("auth/register", {
+    const { data, error } = await doFetch("auth/register", {
       method: "POST",
       body: JSON.stringify(formData),
     });
-    console.log(formData);
+    console.log(data, error);
     setMsg(data);
   };
 

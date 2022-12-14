@@ -13,6 +13,7 @@ import { useContext } from "react";
 import Compte from "./Pages/Compte";
 import Admin from "./Pages/Admin";
 import { deleteCookie } from "./Helpers/cookieHelper";
+import CompteValidate from "./Pages/compte/CompteValidate";
 
 const Nouveautes = React.lazy(() => import("./Pages/Nouveautes/Nouveautes"));
 const Inscription = React.lazy(() => import("./Pages/Inscription/Inscription"));
@@ -173,7 +174,6 @@ function App() {
                 </Suspense>
               }
             />
-
             {/* {auth.role > 0 && (
               <Route
                 path="/compte"
@@ -183,8 +183,8 @@ function App() {
                   </Suspense>
                 }
               />
-            )}
-            {auth.role === 3 && (
+            )} */}
+            {/* {auth.role === 3 && (
               <Route
                 path="/admin"
                 element={
@@ -193,7 +193,7 @@ function App() {
                   </Suspense>
                 }
               />
-            )} */}
+            )}{" "} */}
 
             <Route
               path="/inscription"
@@ -203,7 +203,14 @@ function App() {
                 </Suspense>
               }
             />
-
+            <Route
+              path="/register/validate/:token"
+              element={
+                <Suspense fallback={<span>Chargement</span>}>
+                  <CompteValidate />
+                </Suspense>
+              }
+            />
             <Route
               path="/connexion"
               element={

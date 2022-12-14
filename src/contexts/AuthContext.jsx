@@ -8,7 +8,7 @@ const AuthProvider = ({ children }) => {
   const [auth, setAuth] = useState({ role: 0 });
 
   useEffect(() => {
-    fetch("http://vr-api/compte", {
+    fetch("http://vr-api/connexion", {
       credentials: "include",
       headers: {
         Authorization: getCookie("vinyle_remenber"),

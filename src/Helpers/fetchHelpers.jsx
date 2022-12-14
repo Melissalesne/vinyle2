@@ -14,6 +14,7 @@ const doFetch = async (endpoint, options = {}) => {
   try {
     const resp = await fetch(url, options);
     text = await resp.text();
+    console.log(text);
     loading = false;
     try {
       data = JSON.parse(text);
