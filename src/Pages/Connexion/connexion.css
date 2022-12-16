@@ -18,6 +18,11 @@
     border-radius: 8px; */
 }
 
+.enregistrer {
+    color:red;
+    text-decoration: underline;
+}
+
 .login-mdp:hover{
     background-color: #905e32;
 }
@@ -28,4 +33,8 @@ h5{
     font-family: 'Artifika', serif;
     font-size: 1.5em;
     margin-top: 15px;
+}
+
+.mdp {
+    color:white;
 }

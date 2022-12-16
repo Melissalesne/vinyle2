@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import "./inscription.css";
 import React, { useState } from "react";
@@ -10,25 +10,29 @@ export default function Inscription() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const formInvalid = (errors) => console.log("Errors", errors);
+  const formInvalid = (errors) => console.log("Errors", errors); // ? si les données du form ne sont pas valid
+  const navigate = useNavigate();
 
-  const [msg, setMsg] = useState("");
+  const [msg, setMsg] = useState(""); // ? je sais pas
+
   const formSubmit = async (formData) => {
-    const { data, error } = await doFetch("auth/register", {
+    const { data } = await doFetch("auth/register", {
+      // ? je fait une requete à mon back
       method: "POST",
-      body: JSON.stringify(formData),
+      body: JSON.stringify(formData), // ? retourne les données  dans un tableau associatif
     });
-    console.log(data, error);
-    setMsg(data);
+    console.log(data);
+    setMsg(data.message);
+    navigate("/connexion"); // ? on redirige le user
   };
 
   return (
     <div>
       <div className="container">
-        <div className="form mt-5">
+        <div className="form mt-5  ">
           <div className=" row justify-content-center">
             <div className=" bgForm col-md-6 bg-dark  text-white rounded-3">
-              <div className="row px-3 mb-4">
+              <div className="row px-3 mb-1">
                 <div className="top-part d-flex align-items-center">
                   <div className="text me-3">
                     <h5>Créer votre compte</h5>
@@ -44,12 +48,11 @@ export default function Inscription() {
                   <div className="mb-3">
                     <div className="row">
                       <div className="col">
-                        <label htmlFor="name-input" className="form-label">
-                          nom{" "}
+                        <label htmlFor="nom-input" className="form-label">
+                          Votre nom
                           <i className={"text-danger"}>
                             {errors.nom ? " *" : " "}
                           </i>
-                          Votre nom
                         </label>
                         <input
                           id="name-imput"
@@ -66,9 +69,9 @@ export default function Inscription() {
                       </div>
                       <div className="col">
                         <label htmlFor="prenom-input" className="form-label">
-                          Votre prénom nom{" "}
+                          Votre prénom{" "}
                           <i className={"text-danger"}>
-                            {errors.nom ? " *" : " "}
+                            {errors.prenom ? " *" : " "}
                           </i>
                         </label>
                         <input
@@ -99,6 +102,54 @@ export default function Inscription() {
                       })}
                       id="exampleInputPhone"
                       aria-describedby="PhoneHelp"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="exampleInputVille" className="form-label">
+                      ville
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control rounded-pill"
+                      {...register("ville", {
+                        required: false,
+                        minLength: 3,
+                      })}
+                      id="exampleInputVille"
+                      aria-describedby="VilleHelp"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label
+                      htmlFor="exampleInputCodePostal"
+                      className="form-label"
+                    >
+                      Code postal
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control rounded-pill"
+                      {...register("codePostal", {
+                        required: false,
+                        minLength: 3,
+                      })}
+                      id="exampleInputCodePostal"
+                      aria-describedby="CodePostalHelp"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="exampleInputPays" className="form-label">
+                      Pays
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control rounded-pill"
+                      {...register("pays", {
+                        required: false,
+                        minLength: 3,
+                      })}
+                      id="exampleInputPays"
+                      aria-describedby="PaysHelp"
                     />
                   </div>
                   <div className="mb-3">
@@ -146,9 +197,7 @@ export default function Inscription() {
                 <small className="font-weight-bold">
                   Vous avez déjà un compte ?{" "}
                   <Link to="/connexion">
-                    <a className="text-danger" href="/connexion">
-                      S'identifier
-                    </a>
+                    <span className="identifier">S'identifier</span>
                   </Link>
                 </small>
               </div>

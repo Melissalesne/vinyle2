@@ -19,10 +19,10 @@
     font-size: 1.2em;
 }
 
-li a {
+a {
     color:black;
 }
-li a:hover {
+a:hover {
     color:black;
 }
 

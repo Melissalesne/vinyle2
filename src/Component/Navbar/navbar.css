@@ -11,15 +11,24 @@ body {
     background-image: linear-gradient(to right top, #3f3636, #7e6b66, #bfa899, #ffebce);
    
 }
-.navbar-nav  a {
-   text-decoration: none;
+.navbar-nav  {
+ 
    font-family: 'Kurale', serif;
   
    
 }
-.dropdown-menu a:hover{
+
+
+
+.dropdown-menu .dropdown-item:hover{
     background-image: linear-gradient(to right top, #3f3636, #7e6b66, #bfa899, #ffebce);
     color: white;
+    text-decoration: none;
+}
+
+ a{
+   
+    text-decoration: none!important;
 }
 
 /****************************** Form search*********************************/

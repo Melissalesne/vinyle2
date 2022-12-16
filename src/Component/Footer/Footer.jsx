@@ -1,5 +1,6 @@
 import React from "react";
 import "./footer.css";
+import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -15,58 +16,61 @@ export default function Footer() {
         <div className="col-md-2">
           <ul className="list">
             <li className=" my-2 a-list">Catégories</li>
-            <li>
-              <a href="/" className="text-decoration-none">
-                Nouveautés
-              </a>
-            </li>
-            <li>
-              <a href="/" className="text-decoration-none">
-                Top-ventes
-              </a>
-            </li>
-            <li>
-              <a href="/" className="text-decoration-none">
-                Genres
-              </a>
-            </li>
+            <NavLink to="/nouveautes">
+              <li>
+                <div className="text-decoration-none">Nouveautés</div>
+              </li>
+            </NavLink>
+            <NavLink to="/ventes">
+              <li>
+                <div className="text-decoration-none">Top-ventes</div>
+              </li>
+            </NavLink>
+            <NavLink to="/">
+              <li>
+                <div className="text-decoration-none">Genres</div>
+              </li>
+            </NavLink>
           </ul>
         </div>
 
         <div className="col-md-2">
           <ul className="list">
             <li className=" my-2 a-list">Services clients</li>
-            <li>
-              <a href="/" className="text-decoration-none">
-                C.G.V
-              </a>
-            </li>
-            <li>
-              <a href="/" className="text-decoration-none">
-                Mentions légales
-              </a>
-            </li>
-            <li>
-              <a href="/" className="text-decoration-none">
-                Politiques de confidentialités
-              </a>
-            </li>
+
+            <NavLink to="/">
+              <li>
+                <div className="text-decoration-none">C.G.V</div>
+              </li>
+            </NavLink>
+            <NavLink to="/">
+              <li>
+                <div className="text-decoration-none">Mentions légales</div>
+              </li>
+            </NavLink>
+            <NavLink to="/">
+              <li>
+                <div className="text-decoration-none">
+                  Politiques de confidentialités
+                </div>
+              </li>
+            </NavLink>
           </ul>
         </div>
 
         <div className="col-md-2">
           <ul className="list">
             <li className=" my-2 a-list">Compte</li>
-            <li>
-              <a href="/" className="text-decoration-none">
-                Se connecter
-              </a>
-            </li>
-            <li>
-              <a href="/" className="text-decoration-none">
-                S'inscrire
-              </a>
-            </li>
+            <NavLink to="/connexion">
+              <li>
+                <div className="text-decoration-none">Se connecter</div>
+              </li>
+            </NavLink>
+            <NavLink to="/connexion">
+              <li>
+                <div className="text-decoration-none">S'inscrire</div>
+              </li>
+            </NavLink>
           </ul>
         </div>
 
@@ -74,24 +78,24 @@ export default function Footer() {
           <li className=" my-2 a-list ">Suivez nous</li>
           <ul className="list d-flex align-item-center justify-content-center">
             <li>
-              <a href="/" className="text-dark">
+              <div className="text-dark">
                 <i className="fa-brands fa-facebook me-2 fa-1x"></i>
-              </a>
+              </div>
             </li>
             <li>
-              <a href="/" className="text-dark">
+              <div className="text-dark">
                 <i className="fa-brands fa-twitter mx-2 fa-1x"></i>
-              </a>
+              </div>
             </li>
             <li>
-              <a href="/" className="text-dark">
+              <div className="text-dark">
                 <i className="fa-brands fa-instagram mx-2 fa-1x"></i>
-              </a>
+              </div>
             </li>
             <li>
-              <a href="/" className="text-dark">
+              <div className="text-dark">
                 <i className="fa-brands fa-linkedin mx-2 fa-1x"></i>
-              </a>
+              </div>
             </li>
           </ul>
         </div>

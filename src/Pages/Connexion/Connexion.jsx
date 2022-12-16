@@ -63,7 +63,7 @@ export default function Connexion() {
 
   return (
     <div className="container">
-      <div className="login-form mt-4">
+      <div className="login-form mt-5 p-4">
         <div className="row justify-content-center">
           <div className=" col-md-6 bg-dark text-white rounded-3">
             <div className="row px-3 mb-4">
@@ -77,7 +77,7 @@ export default function Connexion() {
             <div className="row px-3 mb-4">
               <form onSubmit={handleSubmit} noValidate>
                 <div className="mb-3">
-                  <label htmlfor="exampleInputEmail1" className="form-label">
+                  <label htmlFor="exampleInputEmail1" className="form-label">
                     Email
                     <i
                       className={"text-danger" + (valid.email ? " d-none" : "")}
@@ -95,7 +95,7 @@ export default function Connexion() {
                 </div>
                 <div className="mb-3">
                   <label
-                    htmlfor="exampleInputmotDePasse1"
+                    htmlFor="exampleInputmotDePasse1"
                     className="form-label"
                   >
                     Mot de passe
@@ -134,9 +134,11 @@ export default function Connexion() {
                       </label>
                     </div>
                     <div className="right">
-                      <p>
-                        <a href="/">Oublie de mot de passe</a>
-                      </p>
+                      <Link to="/">
+                        <p>
+                          <div className="mdp">Oublie de mot de passe</div>
+                        </p>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -151,9 +153,7 @@ export default function Connexion() {
               <small className="font-weight-bold">
                 Je n'ai pas de compte ?{" "}
                 <Link to="/inscription">
-                  <a className="text-danger" href="/">
-                    Enregistrer
-                  </a>
+                  <span className="enregistrer">Enregistrer</span>
                 </Link>
               </small>
             </div>

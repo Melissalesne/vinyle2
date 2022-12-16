@@ -10,12 +10,14 @@ const useFetch = (endpoint, options = {}) => {
   useEffect(() => {
     const fetchData = async () => {
       const url = "http://vr-api/" + endpoint;
+
       options.credentials = "include";
       options.headers = {
         Authorization: getCookie("vinyle_remenber"),
       };
       try {
         const resp = await fetch(url, options);
+        console.log(resp);
         const textValue = await resp.text();
         setText(textValue);
         setLoading(false);

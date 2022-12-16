@@ -9,6 +9,7 @@ const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     fetch("http://vr-api/connexion", {
+      //? on récupére les cookies
       credentials: "include",
       headers: {
         Authorization: getCookie("vinyle_remenber"),
@@ -17,15 +18,16 @@ const AuthProvider = ({ children }) => {
     fetch("http://vr-api/auth/check", {
       credentials: "include",
       headers: {
-        Authorization: getCookie("vinyle_remenber"),
+        Authorization: getCookie("vinyle_remenber"), // ?set la valeur de Authorization
       },
     })
       .then((resp) => resp.json())
       .then((json) => {
         if (json.data.result) {
-          setAuth({ role: +json.data.role });
+          // ? si le résultat de la requete est vrai
+          setAuth({ role: +json.data.role }); // ? set l'utilisateur
         } else {
-          setAuth({ role: 0 });
+          setAuth({ role: 0 }); // ? sinon le user redevient un visiteur
           document.cookie = `vr-api=null;max-age=0`;
         }
       });
