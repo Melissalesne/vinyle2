@@ -13,16 +13,16 @@ export default function Inscription() {
   const formInvalid = (errors) => console.log("Errors", errors); // ? si les données du form ne sont pas valid
   const navigate = useNavigate();
 
-  const [msg, setMsg] = useState(""); // ? je sais pas
+  const [msg, setMsg] = useState(""); //?
 
   const formSubmit = async (formData) => {
-    const { data } = await doFetch("auth/register", {
+    const { data, text } = await doFetch("auth/register", {
       // ? je fait une requete à mon back
       method: "POST",
       body: JSON.stringify(formData), // ? retourne les données  dans un tableau associatif
     });
-    console.log(data);
-    setMsg(data.message);
+    console.log(text);
+    setMsg(data);
     navigate("/connexion"); // ? on redirige le user
   };
 

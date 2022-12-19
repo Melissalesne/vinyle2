@@ -6,8 +6,7 @@ import "./App.css";
 import Acceuil from "./Pages/Accueil/Acceuil";
 import BaseScreen from "./Pages/baseScreen";
 import React, { Suspense } from "react";
-// import Connexion from "./Pages/Connexion/Connexion";
-// import Inscription from "./Pages/Inscription/Inscription";
+
 import { AuthContext } from "./contexts/AuthContext";
 import { useContext } from "react";
 import Compte from "./Pages/Compte";
@@ -30,6 +29,7 @@ const Classique = React.lazy(() => import("./Pages/Classique/Classique"));
 const BandesOriginal = React.lazy(() =>
   import("./Pages/BandesOriginal/BandesOriginal")
 );
+
 const Reggae = React.lazy(() => import("./Pages/Reggae/Reggae"));
 const Electro = React.lazy(() => import("./Pages/Electro/Electro"));
 const Categories = React.lazy(() => import("./Pages/Categories/categories"));

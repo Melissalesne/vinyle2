@@ -25,7 +25,7 @@ function CompteValidate() {
   const formInvalid = (errors) => console.log("Errors", errors); //? si le form n'est pas valide, j'envoie un msg d'erreur
 
   const formSubmit = async (FormData) => {
-    //? une fois le fomulaire soumi et que l'utilisateur aura renté ses données
+    //? une fois le fomulaire soumi et que l'utilisateur aura rentré ses données
     Object.assign(FormData, data);
     const { data: created } = await doFetch("auth/create", {
       // ? je fais une requete à mon back, qui me renverra les données
@@ -42,7 +42,7 @@ function CompteValidate() {
   const validPw = () => {
     // ? on vérifie si le MDP est valide
     return (
-      document.getElementById("pass-input").value === // ? si la valeur du MDP et égale a la confirmation du MDP
+      document.getElementById("exampleInputmotDePasse1").value === // ? si la valeur du MDP et égale a la confirmation du MDP
       document.getElementById("confirm-input").value
     );
   };
@@ -110,7 +110,7 @@ function CompteValidate() {
                       </label>
                       <input
                         id="confirm-input"
-                        type="password"
+                        type="mot-de-passe"
                         placeholder="confirm please"
                         className="form-control"
                         {...register("confirm", {

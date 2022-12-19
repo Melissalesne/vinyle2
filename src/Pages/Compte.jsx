@@ -12,7 +12,7 @@ function Compte() {
   }
   return (
     <>
-      <h1>Bienvenue sur votre page profil</h1>
+      <h1>Bienvenue sur votre page profil </h1>
       {data && data.email}
     </>
   );

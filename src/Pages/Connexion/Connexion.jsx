@@ -57,7 +57,7 @@ export default function Connexion() {
       navigate("/compte"); // ? on redirige l'utilisateur
     } else {
       setAuth({ role: 0, id: 0 });
-      deleteCookie("vinyle_remenber");
+      deleteCookie("vinyle_remenber"); // ? Nous supprimons le cookie
     }
   };
 
