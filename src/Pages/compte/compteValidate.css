@@ -1,0 +1,39 @@
+.login-mdp {
+    color: white;
+    background-color: #a56b38;
+    font-size: 21px;
+    font-family: Lithos Pro;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    margin: 20px 0;
+    transition: .3s;
+    border-radius: 3px 20px;
+    /* background-color: black;
+    color: white;
+    padding:10px 20px;
+    border-radius: 8px; */
+}
+
+.enregistrer {
+    color:red;
+    text-decoration: underline;
+}
+
+.login-mdp:hover{
+    background-color: #905e32;
+}
+
+
+
+h5{
+    font-family: 'Artifika', serif;
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+.mdp {
+    color:white;
+}

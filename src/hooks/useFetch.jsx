@@ -17,12 +17,12 @@ const useFetch = (endpoint, options = {}) => {
       };
       try {
         const resp = await fetch(url, options);
-        console.log(resp);
         const textValue = await resp.text();
         setText(textValue);
         setLoading(false);
         try {
           const json = JSON.parse(textValue);
+
           setData(json);
         } catch (e) {
           setError(e);

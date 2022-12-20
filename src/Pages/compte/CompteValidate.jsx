@@ -3,18 +3,19 @@ import { useNavigate, useParams } from "react-router-dom";
 import doFetch from "../../Helpers/fetchHelpers";
 import useFetch from "../../hooks/useFetch";
 
+import "./compteValidate.css";
+
 function CompteValidate() {
   const { token } = useParams();
   const navigate = useNavigate();
 
-  const {
-    data: data,
-    loading,
-    error,
-  } = useFetch("auth/validate", {
+  const validate = useFetch("auth/validate", {
     method: "POST",
     body: JSON.stringify({ token }),
   });
+  const data = validate?.data?.data;
+  // console.log(data);
+  const { loading, error } = validate;
 
   const {
     register,
@@ -32,7 +33,6 @@ function CompteValidate() {
       method: "POST",
       body: JSON.stringify(FormData),
     });
-
     if (created.result) {
       // ? si les résultat sont correcte
       navigate("/compte"); //? je redirige le user vers la page compte
@@ -42,7 +42,7 @@ function CompteValidate() {
   const validPw = () => {
     // ? on vérifie si le MDP est valide
     return (
-      document.getElementById("exampleInputmotDePasse1").value === // ? si la valeur du MDP et égale a la confirmation du MDP
+      document.getElementById("pass-input").value === // ? si la valeur du MDP et égale a la confirmation du MDP
       document.getElementById("confirm-input").value
     );
   };
@@ -51,13 +51,12 @@ function CompteValidate() {
   }
   if (!data?.result) {
     // ? si les données entré ne correspondent pas
-    console.log(data);
+
     return "Votre inscription n'a pas pu être validée, envoyez une nouvelle demande"; //? on return un message
   }
 
   return (
     <>
-      <h1>Mot de passe </h1>
       {data?.result && (
         <div className="container">
           <div className="login-form mt-5 p-4">
@@ -75,24 +74,21 @@ function CompteValidate() {
                     noValidate
                   >
                     <div className="mb-3">
-                      <label
-                        htmlFor="exampleInputmotDePasse1"
-                        className="form-label"
-                      >
+                      <label htmlFor="pass-input" className="form-label">
                         Mot de passe
                         <i className={"text-danger"}>
                           {errors.pass ? " *" : " "}
                         </i>
                       </label>
                       <input
-                        type="mot-de-passe"
-                        name="mot_de_passe"
-                        className="form-control rounded-pill"
-                        id="exampleInputmotDePasse1"
+                        type="password"
                         {...register("pass", {
                           required: true,
                           regex: /^(?=.*[A-Z]).{6,}$/,
                         })}
+                        // name="mot_de_passe"
+                        className="form-control rounded-pill"
+                        id="pass-input"
                       />
                       <i className={"text-danger d-block"}>
                         {errors.pass
@@ -110,14 +106,14 @@ function CompteValidate() {
                       </label>
                       <input
                         id="confirm-input"
-                        type="mot-de-passe"
-                        placeholder="confirm please"
-                        className="form-control"
+                        type="password"
                         {...register("confirm", {
                           required: true,
                           regex: /^(?=.*[A-Z]).{6,}$/,
                           validate: validPw,
                         })}
+                        placeholder="confirm please"
+                        className="form-control"
                       />
                       <i className={"text-danger d-block"}>
                         {errors.confirm
