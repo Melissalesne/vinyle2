@@ -10,20 +10,19 @@ export default function Inscription() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const formInvalid = (errors) => console.log("Errors", errors); // ? si les données du form ne sont pas valid
+  const formInvalid = (errors) => console.log("Errors", errors);
   const navigate = useNavigate();
 
-  const [msg, setMsg] = useState(""); //?
+  const [msg, setMsg] = useState("");
 
   const formSubmit = async (formData) => {
     const { data, text } = await doFetch("auth/register", {
-      // ? je fait une requete à mon back
       method: "POST",
-      body: JSON.stringify(formData), // ? retourne les données  dans un tableau associatif
+      body: JSON.stringify(formData),
     });
     console.log(text);
     setMsg(data);
-    navigate("/connexion"); // ? on redirige le user
+    navigate("/connexion");
   };
 
   return (
@@ -183,7 +182,7 @@ export default function Inscription() {
                         required: false,
                         minLength: 3,
                       })}
-                      id="exampleInputPassword1"
+                      id="pass-input"
                     />
                   </div>
                   <button type="submit" className="enregistrer-button">

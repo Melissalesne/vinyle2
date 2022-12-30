@@ -18,7 +18,7 @@ const doFetch = async (endpoint, options = {}) => {
     loading = false;
     try {
       data = JSON.parse(text);
-      console.log(text);
+      // console.log(text);
     } catch (e) {
       error = e;
     }

@@ -174,7 +174,7 @@ function App() {
                 </Suspense>
               }
             />
-            {/* {auth.role > 0 && (
+            {auth.role > 0 && (
               <Route
                 path="/compte"
                 element={
@@ -183,8 +183,8 @@ function App() {
                   </Suspense>
                 }
               />
-            )} */}
-            {/* {auth.role === 3 && (
+            )}
+            {auth.role === 4 && (
               <Route
                 path="/admin"
                 element={
@@ -193,8 +193,7 @@ function App() {
                   </Suspense>
                 }
               />
-            )}{" "} */}
-
+            )}{" "}
             <Route
               path="/inscription"
               element={

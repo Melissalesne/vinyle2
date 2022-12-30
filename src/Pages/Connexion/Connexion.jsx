@@ -32,8 +32,8 @@ export default function Connexion() {
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // ? empeche les evenements par défaut
-    const formData = new FormData(e.target);
-    const jsonData = Object.fromEntries(formData.entries());
+    const formData = new FormData(e.target); //? j'envoie les valeurs en tant que FormData
+    const jsonData = Object.fromEntries(formData.entries()); //? j'entre les valeurs du form
     console.log(jsonData);
 
     if (!validForm(jsonData)) {
@@ -42,7 +42,7 @@ export default function Connexion() {
     }
 
     const { data } = await doFetch("auth/connexion", {
-      // ? je fait une requete à mon back
+      // ? je fait une requete à l'api
       method: "POST",
       body: JSON.stringify(jsonData), // ? retourne les données  dans un tableau associatif
     });
@@ -108,7 +108,7 @@ export default function Connexion() {
                     </i>
                   </label>
                   <input
-                    type="mot-de-passe"
+                    type="password"
                     name="mot_de_passe"
                     className="form-control rounded-pill"
                     id="exampleInputmotDePasse1"

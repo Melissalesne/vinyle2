@@ -10,11 +10,12 @@ function CompteValidate() {
   const navigate = useNavigate();
 
   const validate = useFetch("auth/validate", {
+    // ? je fais une requete à l'api qui me renverra le token
     method: "POST",
     body: JSON.stringify({ token }),
   });
   const data = validate?.data?.data;
-  // console.log(data);
+
   const { loading, error } = validate;
 
   const {
@@ -25,14 +26,15 @@ function CompteValidate() {
 
   const formInvalid = (errors) => console.log("Errors", errors); //? si le form n'est pas valide, j'envoie un msg d'erreur
 
-  const formSubmit = async (FormData) => {
+  const formSubmit = async (formData) => {
     //? une fois le fomulaire soumi et que l'utilisateur aura rentré ses données
-    Object.assign(FormData, data);
+    Object.assign(formData, data);
     const { data: created } = await doFetch("auth/create", {
-      // ? je fais une requete à mon back, qui me renverra les données
+      // ? je fais une requete à l'api, qui me renverra les données
       method: "POST",
-      body: JSON.stringify(FormData),
+      body: JSON.stringify(formData),
     });
+
     if (created.result) {
       // ? si les résultat sont correcte
       navigate("/compte"); //? je redirige le user vers la page compte

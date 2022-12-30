@@ -19,7 +19,7 @@ const AuthProvider = ({ children }) => {
     fetch("http://vr-api/auth/check", {
       credentials: "include",
       headers: {
-        Authorization: getCookie("vinyle_remenber"), // ? nous ajoutons en option credentials "include" ainsi qu'un header de type Authorization contenant le token
+        Authorization: getCookie("vinyle_remenber"), // ? on ajoute  en option credentials "include" ainsi qu'un header de type Authorization contenant le token
       },
     })
       .then((resp) => resp.json())
